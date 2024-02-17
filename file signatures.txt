@@ -1,0 +1,82 @@
+FILE 2
+
+D0 CF 11 E0 A1 B1 1A E1	 	ÐÏ.à¡±.á
+DOC, DOT, PPS, PPT, XLA, XLS, WIZ	 	An Object Linking and Embedding (OLE) Compound File (CF) (i.e., OLECF)
+file format, known as Compound Binary File format by Microsoft, used by
+Microsoft Office 97-2003 applications (Word, Powerpoint, Excel, Wizard). Part of
+Microsoft's Structured Storage (MSS) architecture for Component Object Model (COM)-based
+operating systems.
+[See also Excel, Outlook, PowerPoint, and Word "subheaders" at byte offset 512 (0x200).]
+There appear to several subheader formats and a dearth of documentation.
+There have been reports that there are different subheaders for Windows and Mac
+versions of MS Office but I cannot confirm that.]
+Password-protected DOCX, XLSX, and PPTX files also use this signature those files
+are saved as OLECF files.
+[Note the similarity between D0 CF 11 E0 and the word "DOCFILE"!]
+AC_	 	CaseWare Working Papers compressed client file
+ADP	 	Access project file
+APR	 	Lotus/IBM Approach 97 file
+DB	 	MSWorks database file
+MSC	 	Microsoft Common Console Document
+MSG	 	Microsoft Outlook/Exchange Message
+MSI	 	Microsoft Installer package
+MSP	 	Windows Installer Patch
+MTW	 	Minitab data file
+MXD	 	ArcMap GIS project file
+OPT	 	Developer Studio File Workspace Options file
+PUB	 	MS Publisher file
+QBM	 	QuickBooks Portable Company File
+RVT	 	Revit Project file
+SOU	 	Visual Studio Solution User Options file
+SPO	 	SPSS output file
+VSD	 	Visio file
+WPS	 	MSWorks text document
+
+FILE 3
+25 50 44 46	 	%PDF
+PDF, FDF, AI	 	Adobe Portable Document Format, Forms Document Format, and Illustrator graphics files
+Trailers:
+0A 25 25 45 4F 46 (.%%EOF)
+0A 25 25 45 4F 46 0A (.%%EOF.)
+0D 0A 25 25 45 4F 46 0D 0A (..%%EOF..)
+0D 25 25 45 4F 46 0D (.%%EOF.)
+NOTE: There may be multiple end-of-file marks within the
+file. When carving, be sure to get the last one.
+
+FILE 4
+NOT APPLICABLE
+
+FILE 5
+4C 00 00 00 01 14 02 00	 	L.......
+LNK	 	Windows shell link (shortcut) file. See also The Meaning of Linkfiles in Forensic Examinations
+and Evidentiary Value of Link Files.
+
+FILE 6
+4D 5A 90 00 03 00 00 00	 	MZ......
+API	 	Acrobat plug-in
+AX	 	DirectShow filter
+FLT	 	Audition graphic filter file (Adobe)
+
+4D 5A 90 00 03 00 00 00
+	 	MZ......
+
+FILE 7
+4D 5A 90 00 03 00 00 00	 	MZ......
+API	 	Acrobat plug-in
+AX	 	DirectShow filter
+FLT	 	Audition graphic filter file (Adobe)
+
+4D 5A 90 00 03 00 00 00
+	 	MZ......
+
+FILE 8
+FF D8 FF E0 xx xx 4A 46
+49 46 00	 	ÿØÿà..JF
+IF.
+JFIF, JPE, JPEG, JPG	 	JPEG/JFIF graphics file
+Trailer: FF D9 (ÿÙ)
+
+FILE 9
+89 50 4E 47 0D 0A 1A 0A	 	‰PNG....
+PNG	 	Portable Network Graphics file
+Trailer: 49 45 4E 44 AE 42 60 82 (IEND®B`‚...)
